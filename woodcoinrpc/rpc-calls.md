@@ -148,86 +148,115 @@ getreceivedbyaccount 	[account] [minconf=1] 	Returns the total amount received b
 *Fills the keypool, requires wallet passphrase to be set.*
 
 **listaccounts 	[minconf=1]**
+
 *Returns Object that has account names as keys, account balances as values.*
 
 **listaddressgroupings**
+
 *Returns all addresses in the wallet and info used for coincontrol.*
 
 **listbannednodes**
+
 *OMG2 only Returns a list of currently banned nodes along with the ban expiration timestamps.*
     
 **listlockunspent**
+
 *Returns list of temporarily unspendable outputs.*
 
 **listreceivedbyaccount [minconf=1] [includeempty=false]**
+
 *Returns an array of objects containing: account, amount, confirmations.*
 
 **listreceivedbyaddress [minconf=1] [includeempty=false]**
+
 *Returns an array of objects containing: address, account, amount, confirmations. To get a list of accounts on the system, execute litecoind*
 
 **listreceivedbyaddress 0 true**
 
 **listsinceblock 	[blockhash] [target-confirmations]**
+
 *Get all transactions in blocks since block [blockhash], or all transactions if omitted.*
 
 **listtransactions [account] [count=10] [from=0]**
+
 *Returns up to [count] most recent transactions skipping the first [from] transactions for account [account]. If [account] not provided will return recent transaction from all accounts.*
 
 **listunspent [minconf=1] [maxconf=9999999] ["address",...]**
+
 *Returns array of unspent transaction inputs in the wallet.*
 
 **lockunspent &lt;unlock?&gt; [array-of-Objects]**
+
 *Updates list of temporarily unspendable outputs.*
 
 **move &lt;fromaccount&gt; &lt;toaccount&gt; &lt;amount&gt; [minconf=1] [comment]**
+
 *Move from one account in your wallet to another.*
 
 **sendfrom &lt;fromaccount&gt; &lt;towooodcoinaddress&gt; &lt;amount&gt; [minconf=1] [comment] [comment-to]**
+
 *&lt;amount&gt; is a real and is rounded to 8 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object).*
 
 **sendmany &lt;fromaccount&gt; {address:amount,...} [minconf=1] [comment]**
+
 *Amounts are double-precision floating point numbers.*
 
 **sendrawtransaction 	&lt;hexstring&gt;**
+
 *Submits raw transaction (serialized, hex-encoded) to local node and network.*
 
 **sendtoaddress &lt;woodcoinaddress&gt; &lt;amount&gt; [comment] [comment-to]**
+
 *&lt;amount&gt; is a real and is rounded to 8 decimal places. Returns the transaction ID &lt;txid&gt; if successful.*
 
 **setaccount &lt;woodcoinaddress&gt; &lt;account&gt;**
+
 *Sets the account associated with the given address. Assigning address that is already assigned to the same account will create a new address associated with that account.*
 
 **setmininput &lt;amount&gt;**
+
 *&lt;amount&gt; is a real and is rounded to the nearest 0.00000001.*
 
 **settxfee &lt;amount&gt;**
+
 *&lt;amount&gt; is a real and is rounded to the nearest 0.00000001.*
 
 **signmessage &lt;woodcoinaddress&gt; &lt;message&gt;**
+
 *Sign a message with the private key of an address.*
 
-**signrawtransaction 	&lt;hexstring&gt; [{"txid":txid,"vout":n,"scriptPubKey":hex},...]***[&lt;privatekey1&gt;,...] 	Adds signatures to a raw transaction and returns the resulting raw transaction. 	Y/N*
+**signrawtransaction 	&lt;hexstring&gt; [{"txid":txid,"vout":n,"scriptPubKey":hex},...]**
+
+*[&lt;privatekey1&gt;,...] 	Adds signatures to a raw transaction and returns the resulting raw transaction.*
 
 **stop**
+
 *Stop Litecoin server.*
 
 **submitblock &lt;hex data&gt; [optional-params-obj]**
+
 *Attempts to submit new block to network.*
 
 **validateaddress &lt;woodcoinaddress&gt;**
+
 *Return information about &lt;woodcoinaddress&gt;.*
 
 **verifychain**
+
 *Verifies chain database at runtime.*
 
 **verifymessage &lt;woodcoinaddress&gt; &lt;signature&gt; &lt;message&gt;**
+
 *Verifies a signed message.*
 
 **walletlock**
+
 *Removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call walletpassphrase again before being able to call any methods which require the wallet to be unlocked.*
 
 **walletpassphrase &lt;passphrase&gt; &lt;timeout&gt;**
+
 *Stores the wallet decryption key in memory for &lt;timeout&gt; seconds.*
 
 **walletpassphrasechange 	&lt;oldpassphrase&gt; &lt;newpassphrase&gt;**
+
 *Changes the wallet passphrase from &lt;oldpassphrase&gt; to &lt;newpassphrase&gt;.*
