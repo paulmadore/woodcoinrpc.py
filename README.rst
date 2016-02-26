@@ -1,8 +1,8 @@
 =================
-python-bitcoinrpc
+woodcoinrpc.py
 =================
 
-AuthServiceProxy is an improved version of python-jsonrpc.
+AuthServiceProxy by Jeff Garzik is an improved version of python-jsonrpc.
 
 It includes the following generic improvements:
 
@@ -22,21 +22,18 @@ It also includes the following bitcoin-specific details:
 Installation
 ============
 
-1. change the first line of setup.py to point to the directory of your installation of python 2.*
+1. change the first line of setup.py to point to the directory of your installation of python 3.*
 2. run setup.py
 
-Note: This will only install bitcoinrpc. If you also want to install jsonrpc to preserve 
-backwards compatibility, you have to replace 'bitcoinrpc' with 'jsonrpc' in setup.py and run it again.
+Note: This will only install woodcoinrpc. If you also want to install jsonrpc to preserve 
+backwards compatibility, you have to replace 'woodcoinrpc' with 'jsonrpc' in setup.py and run it again.
 
-Or simply install the library using pip::
-
-    pip install python-bitcoinrpc
 
 Example
 =======
 .. code:: python
 
-    from bitcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
+    from woodcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
 
     # rpc_user and rpc_password are set in the bitcoin.conf file
     rpc_connection = AuthServiceProxy("http://%s:%s@127.0.0.1:8332"%(rpc_user, rpc_password))
@@ -54,17 +51,17 @@ Logging all RPC calls to stderr
 ===============================
 .. code:: python
 
-    from bitcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
+    from woodcoinrpc.authproxy import AuthServiceProxy, JSONRPCException
     import logging
 
     logging.basicConfig()
-    logging.getLogger("BitcoinRPC").setLevel(logging.DEBUG)
+    logging.getLogger("woodcoinrpc").setLevel(logging.DEBUG)
 
     rpc_connection = AuthServiceProxy("http://%s:%s@127.0.0.1:8332"%(rpc_user, rpc_password))
     print(rpc_connection.getinfo())
 
 Produces output on stderr like
 
-    DEBUG:BitcoinRPC:-1-> getinfo []
-    DEBUG:BitcoinRPC:<-1- {"connections": 8, ...etc }
+    DEBUG:woodcoinrpc:-1-> getinfo []
+    DEBUG:woodcoinrpc:<-1- {"connections": 8, ...etc }
 

@@ -1,6 +1,7 @@
-
+#!/usr/local/bin/python3
 """
   Copyright 2011 Jeff Garzik
+  Copyright 2016 Paul Madore
 
   AuthServiceProxy has the following improvements over python-jsonrpc's
   ServiceProxy class:
@@ -51,7 +52,7 @@ USER_AGENT = "AuthServiceProxy/0.1"
 
 HTTP_TIMEOUT = 30
 
-log = logging.getLogger("BitcoinRPC")
+log = logging.getLogger("WoodcoinRPC")
 
 class JSONRPCException(Exception):
     def __init__(self, rpc_error):
