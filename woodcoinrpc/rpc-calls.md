@@ -35,11 +35,11 @@
 *Encrypts the wallet with &lt;passphrase&gt;.*
 
 **getaccount 	&lt;woodcoinaddress&gt;**
-*Returns the account associated with the given address. *
+*Returns the account associated with the given address.*
 
 **getaccountaddress 	&lt;account&gt;**
     
-*Returns the current Litecoin address for receiving payments to this account. *
+*Returns the current Litecoin address for receiving payments to this account.*
 
 **getaddednodeinfo 	&lt;dns&gt; [node]**
     
@@ -174,7 +174,7 @@ getreceivedbyaccount 	[account] [minconf=1] 	Returns the total amount received b
 *Returns up to [count] most recent transactions skipping the first [from] transactions for account [account]. If [account] not provided will return recent transaction from all accounts.*
 
 **listunspent [minconf=1] [maxconf=9999999] ["address",...]**
-*Returns array of unspent transaction inputs in the wallet. *
+*Returns array of unspent transaction inputs in the wallet.*
 
 **lockunspent &lt;unlock?&gt; [array-of-Objects]**
 *Updates list of temporarily unspendable outputs.*
@@ -183,7 +183,7 @@ getreceivedbyaccount 	[account] [minconf=1] 	Returns the total amount received b
 *Move from one account in your wallet to another.*
 
 **sendfrom &lt;fromaccount&gt; &lt;towooodcoinaddress&gt; &lt;amount&gt; [minconf=1] [comment] [comment-to]**
-*&lt;amount&gt; is a real and is rounded to 8 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object). *
+*&lt;amount&gt; is a real and is rounded to 8 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object).*
 
 **sendmany &lt;fromaccount&gt; {address:amount,...} [minconf=1] [comment]**
 *Amounts are double-precision floating point numbers.*
@@ -195,7 +195,7 @@ getreceivedbyaccount 	[account] [minconf=1] 	Returns the total amount received b
 *&lt;amount&gt; is a real and is rounded to 8 decimal places. Returns the transaction ID &lt;txid&gt; if successful.*
 
 **setaccount &lt;woodcoinaddress&gt; &lt;account&gt;**
-*Sets the account associated with the given address. Assigning address that is already assigned to the same account will create a new address associated with that account. *
+*Sets the account associated with the given address. Assigning address that is already assigned to the same account will create a new address associated with that account.*
 
 **setmininput &lt;amount&gt;**
 *&lt;amount&gt; is a real and is rounded to the nearest 0.00000001.*
@@ -206,7 +206,7 @@ getreceivedbyaccount 	[account] [minconf=1] 	Returns the total amount received b
 **signmessage &lt;woodcoinaddress&gt; &lt;message&gt;**
 *Sign a message with the private key of an address.*
 
-**signrawtransaction 	&lt;hexstring&gt; [{"txid":txid,"vout":n,"scriptPubKey":hex},...]** *[&lt;privatekey1&gt;,...] 	Adds signatures to a raw transaction and returns the resulting raw transaction. 	Y/N*
+**signrawtransaction 	&lt;hexstring&gt; [{"txid":txid,"vout":n,"scriptPubKey":hex},...]***[&lt;privatekey1&gt;,...] 	Adds signatures to a raw transaction and returns the resulting raw transaction. 	Y/N*
 
 **stop**
 *Stop Litecoin server.*
@@ -221,13 +221,13 @@ getreceivedbyaccount 	[account] [minconf=1] 	Returns the total amount received b
 *Verifies chain database at runtime.*
 
 **verifymessage &lt;woodcoinaddress&gt; &lt;signature&gt; &lt;message&gt;**
-*Verifies a signed message. *
+*Verifies a signed message.*
 
 **walletlock**
-*Removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call walletpassphrase again before being able to call any methods which require the wallet to be unlocked. *
+*Removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call walletpassphrase again before being able to call any methods which require the wallet to be unlocked.*
 
 **walletpassphrase &lt;passphrase&gt; &lt;timeout&gt;**
 *Stores the wallet decryption key in memory for &lt;timeout&gt; seconds.*
 
 **walletpassphrasechange 	&lt;oldpassphrase&gt; &lt;newpassphrase&gt;**
-*Changes the wallet passphrase from &lt;oldpassphrase&gt; to &lt;newpassphrase&gt;. *
+*Changes the wallet passphrase from &lt;oldpassphrase&gt; to &lt;newpassphrase&gt;.*
