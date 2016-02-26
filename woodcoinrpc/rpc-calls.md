@@ -1,20 +1,20 @@
-**addmultisigaddress <nrequired> <'["key","key"]'> [account]**
+**addmultisigaddress &lt;nrequired&gt; &lt;'["key","key"]'&gt; [account]**
 
 *Add a nrequired-to-sign multisignature address to the wallet. Each key is a Litecoin address or hex-encoded public key. If [account] is specified, assign address to [account].*
     
-**addnode	<node> <add/remove/onetry>**
+**addnode	&lt;node&gt; &lt;add/remove/onetry&gt;**
     
-*Attempts add or remove <node> from the addnode list or try a connection to <node> once.*
+*Attempts add or remove &lt;node&gt; from the addnode list or try a connection to &lt;node&gt; once.*
 
-**backupwallet <destination>**
+**backupwallet &lt;destination&gt;**
     
 *Safely copies wallet.dat to destination, which can be a directory or a path with filename.*
 
-**bannode <node> <expiration>**
+**bannode &lt;node&gt; &lt;expiration&gt;**
     
-*OMG2 only Bans <node> until unix timestamp <expiration>. Set <expiration> to -1 to unban a node.*
+*OMG2 only Bans &lt;node&gt; until unix timestamp &lt;expiration&gt;. Set &lt;expiration&gt; to -1 to unban a node.*
     
-**createmultisig <nrequired> <'["key,"key"]'>**
+**createmultisig &lt;nrequired&gt; &lt;'["key,"key"]'&gt;**
     
 *Creates a multi-signature address and returns a json object.*
 
@@ -22,30 +22,30 @@
     
 *Creates a raw transaction spending given inputs.*
 
-**decoderawtransaction 	<hex string>**
+**decoderawtransaction 	&lt;hex string&gt;**
     
 *Produces a human-readable JSON object for a raw transaction.*
 
-**dumpprivkey 	<woodcoinaddress>**
+**dumpprivkey 	&lt;woodcoinaddress&gt;**
     
-*Reveals the private key corresponding to <woodcoinaddress>.*
+*Reveals the private key corresponding to &lt;woodcoinaddress&gt;.*
     
-**encryptwallet 	<passphrase>**
+**encryptwallet 	&lt;passphrase&gt;**
     
-*Encrypts the wallet with <passphrase>.*
+*Encrypts the wallet with &lt;passphrase&gt;.*
 
-**getaccount 	<woodcoinaddress>**
+**getaccount 	&lt;woodcoinaddress&gt;**
 *Returns the account associated with the given address. *
 
-**getaccountaddress 	<account>**
+**getaccountaddress 	&lt;account&gt;**
     
 *Returns the current Litecoin address for receiving payments to this account. *
 
-**getaddednodeinfo 	<dns> [node]**
+**getaddednodeinfo 	&lt;dns&gt; [node]**
     
 *Returns information about the given added node, or all added nodes (note that onetry addnodes are not listed here) If dns is false, only a list of added nodes will be provided, otherwise connected information will also be available.*
     
-**getaddressesbyaccount 	<account>**
+**getaddressesbyaccount 	&lt;account&gt;**
     
 *Returns the list of addresses for the given account.*
     
@@ -58,7 +58,7 @@
     
 *Returns the hash of the newest block in the longest block chain.*
 
-**getblock <hash>**
+**getblock &lt;hash&gt;**
     
 *Returns information about the block with the given hash.*
 
@@ -68,9 +68,9 @@
 *Returns the number of blocks in the longest block chain.*
 
 
-**getblockhash <index>**
+**getblockhash &lt;index&gt;**
 
-*Returns hash of block in best-block-chain at <index>; index 0 is the genesis block.*
+*Returns hash of block in best-block-chain at &lt;index&gt;; index 0 is the genesis block.*
 
 
 **getblocktemplate [params]**
@@ -110,20 +110,20 @@
 
 *Returns all transaction ids in memory pool.*
 
-**getrawtransaction 	<txid> [verbose=0]**
+**getrawtransaction 	&lt;txid&gt; [verbose=0]**
 
 *Returns raw transaction representation for given transaction id.
 getreceivedbyaccount 	[account] [minconf=1] 	Returns the total amount received by addresses with [account] in transactions with at least [minconf] confirmations. If [account] not provided return will include all transactions to all accounts.*
 
-**getreceivedbyaddress 	<woodcoinaddress> [minconf=1]**
+**getreceivedbyaddress 	&lt;woodcoinaddress&gt; [minconf=1]**
 
-*Returns the total amount received by    <woodcoinaddress> in transactions with at least [minconf] confirmations. While some might consider this obvious, value reported by this only considers __receiving__ transactions. It does not check payments that have been made __from__ this address. In other words, this is not "getaddressbalance". Works only for addresses in the local wallet, external addresses will always show 0.*
+*Returns the total amount received by    &lt;woodcoinaddress&gt; in transactions with at least [minconf] confirmations. While some might consider this obvious, value reported by this only considers __receiving__ transactions. It does not check payments that have been made __from__ this address. In other words, this is not "getaddressbalance". Works only for addresses in the local wallet, external addresses will always show 0.*
 
-**gettransaction 	<txid>**
+**gettransaction 	&lt;txid&gt;**
 
 *Returns an object about the given transaction containing: amount, confirmations, txid, time[1], details (an array of objects containing: account, address, category, amount, fee).*
 
-**gettxout 	<txid> <n> [includemempool=true]**
+**gettxout 	&lt;txid&gt; &lt;n&gt; [includemempool=true]**
 
 *Returns details about an unspent transaction output (UTXO).*
 
@@ -139,7 +139,7 @@ getreceivedbyaccount 	[account] [minconf=1] 	Returns the total amount received b
 
 *List commands, or get help for a command.*
 
-**importprivkey <woodcoinprivkey> [label] [rescan=true]**
+**importprivkey &lt;woodcoinprivkey&gt; [label] [rescan=true]**
 
 *Adds a private key (as returned by dumpprivkey) to your wallet. This may take a while, as a rescan is done, looking for existing transactions. Optional [rescan] parameter added in 0.8.0.*
 
@@ -176,58 +176,58 @@ getreceivedbyaccount 	[account] [minconf=1] 	Returns the total amount received b
 **listunspent [minconf=1] [maxconf=9999999] ["address",...]**
 *Returns array of unspent transaction inputs in the wallet. *
 
-**lockunspent <unlock?> [array-of-Objects]**
+**lockunspent &lt;unlock?&gt; [array-of-Objects]**
 *Updates list of temporarily unspendable outputs.*
 
-**move <fromaccount> <toaccount> <amount> [minconf=1] [comment]**
+**move &lt;fromaccount&gt; &lt;toaccount&gt; &lt;amount&gt; [minconf=1] [comment]**
 *Move from one account in your wallet to another.*
 
-**sendfrom <fromaccount> <towooodcoinaddress> <amount> [minconf=1] [comment] [comment-to]**
-*<amount> is a real and is rounded to 8 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object). *
+**sendfrom &lt;fromaccount&gt; &lt;towooodcoinaddress&gt; &lt;amount&gt; [minconf=1] [comment] [comment-to]**
+*&lt;amount&gt; is a real and is rounded to 8 decimal places. Will send the given amount to the given address, ensuring the account has a valid balance using [minconf] confirmations. Returns the transaction ID if successful (not in JSON object). *
 
-**sendmany <fromaccount> {address:amount,...} [minconf=1] [comment]**
+**sendmany &lt;fromaccount&gt; {address:amount,...} [minconf=1] [comment]**
 *Amounts are double-precision floating point numbers.*
 
-**sendrawtransaction 	<hexstring>**
+**sendrawtransaction 	&lt;hexstring&gt;**
 *Submits raw transaction (serialized, hex-encoded) to local node and network.*
 
-**sendtoaddress <woodcoinaddress> <amount> [comment] [comment-to]**
-*<amount> is a real and is rounded to 8 decimal places. Returns the transaction ID <txid> if successful.*
+**sendtoaddress &lt;woodcoinaddress&gt; &lt;amount&gt; [comment] [comment-to]**
+*&lt;amount&gt; is a real and is rounded to 8 decimal places. Returns the transaction ID &lt;txid&gt; if successful.*
 
-**setaccount <woodcoinaddress> <account>**
+**setaccount &lt;woodcoinaddress&gt; &lt;account&gt;**
 *Sets the account associated with the given address. Assigning address that is already assigned to the same account will create a new address associated with that account. *
 
-**setmininput <amount>**
-*<amount> is a real and is rounded to the nearest 0.00000001.*
+**setmininput &lt;amount&gt;**
+*&lt;amount&gt; is a real and is rounded to the nearest 0.00000001.*
 
-**settxfee <amount>**
-*<amount> is a real and is rounded to the nearest 0.00000001.*
+**settxfee &lt;amount&gt;**
+*&lt;amount&gt; is a real and is rounded to the nearest 0.00000001.*
 
-**signmessage <woodcoinaddress> <message>**
+**signmessage &lt;woodcoinaddress&gt; &lt;message&gt;**
 *Sign a message with the private key of an address.*
 
-**signrawtransaction 	<hexstring> [{"txid":txid,"vout":n,"scriptPubKey":hex},...]** *[<privatekey1>,...] 	Adds signatures to a raw transaction and returns the resulting raw transaction. 	Y/N*
+**signrawtransaction 	&lt;hexstring&gt; [{"txid":txid,"vout":n,"scriptPubKey":hex},...]** *[&lt;privatekey1&gt;,...] 	Adds signatures to a raw transaction and returns the resulting raw transaction. 	Y/N*
 
 **stop**
 *Stop Litecoin server.*
 
-**submitblock <hex data> [optional-params-obj]**
+**submitblock &lt;hex data&gt; [optional-params-obj]**
 *Attempts to submit new block to network.*
 
-**validateaddress <woodcoinaddress>**
-*Return information about <woodcoinaddress>.*
+**validateaddress &lt;woodcoinaddress&gt;**
+*Return information about &lt;woodcoinaddress&gt;.*
 
 **verifychain**
 *Verifies chain database at runtime.*
 
-**verifymessage <woodcoinaddress> <signature> <message>**
+**verifymessage &lt;woodcoinaddress&gt; &lt;signature&gt; &lt;message&gt;**
 *Verifies a signed message. *
 
 **walletlock**
 *Removes the wallet encryption key from memory, locking the wallet. After calling this method, you will need to call walletpassphrase again before being able to call any methods which require the wallet to be unlocked. *
 
-**walletpassphrase <passphrase> <timeout>**
-*Stores the wallet decryption key in memory for <timeout> seconds.*
+**walletpassphrase &lt;passphrase&gt; &lt;timeout&gt;**
+*Stores the wallet decryption key in memory for &lt;timeout&gt; seconds.*
 
-**walletpassphrasechange 	<oldpassphrase> <newpassphrase>**
-*Changes the wallet passphrase from <oldpassphrase> to <newpassphrase>. *
+**walletpassphrasechange 	&lt;oldpassphrase&gt; &lt;newpassphrase&gt;**
+*Changes the wallet passphrase from &lt;oldpassphrase&gt; to &lt;newpassphrase&gt;. *
